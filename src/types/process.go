@@ -47,6 +47,12 @@ type (
 		IsForeground      bool                   `yaml:"is_foreground,omitempty"`
 		IsTty             bool                   `yaml:"is_tty,omitempty"`
 		IsElevated        bool                   `yaml:"is_elevated,omitempty"`
+		IsContainer       bool                   `yaml:"is_container"`
+		ContainerRuntime  string                 `yaml:"container_runtime"`
+		ContainerExec     string                 `yaml:"container_execution"`
+		ContainerVolumes  []string               `yaml:"container_volumes"`
+		ContainerImage    string                 `yaml:"container_image"`
+		ContainerArgs     []string               `yaml:"container_args"`
 		IsInteractive     bool                   `yaml:"is_interactive,omitempty"`
 		LaunchTimeout     int                    `yaml:"launch_timeout_seconds,omitempty"`
 		IsDisabled        string                 `yaml:"is_disabled,omitempty"`
